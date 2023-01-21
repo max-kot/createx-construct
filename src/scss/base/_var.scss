@@ -1,15 +1,19 @@
 // Vars
 :root {
 	// Colors
-	--main-color: #ececec;
-	--bg-color: #252525;
-	--primary-color: #dc143c;
+	--main-color: #787a80;
+	--bg-color: #ffff;
+	--primary-color: #ff5a30;
+	--title-color: #1e212c;
+	--menu-color: #424551;
 
 	// Sizes
-	--container-width: 1200px;
+	--container-width: 1230px;
 
 	// Fonts
-	--arial: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	--arial-font: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	--main-font: "Ubuntu", sans-serif;
+	--second-font: "Lato", sans-serif;
 }
 
 // MEDIA MIXIN
@@ -62,13 +66,13 @@
 }
 
 // Flex
-@mixin flex-c {
+@mixin flex-all-c {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
-@mixin flex-sb {
+@mixin flex-sb-c {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -79,4 +83,9 @@
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
+}
+
+@mixin flex-aic {
+	display: flex;
+	align-items: center;
 }

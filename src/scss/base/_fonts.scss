@@ -1,9 +1,5 @@
-@include font-face("Rubik", "../fonts/Rubik/Rubik-Light", 300);
-@include font-face("Rubik", "../fonts/Rubik/Rubik-Regular", 400);
-@include font-face("Rubik", "../fonts/Rubik/Rubik-Medium", 500);
+@include font-face("Ubuntu", "../fonts/Ubuntu/Ubuntu-Regular", 400);
+@include font-face("Ubuntu", "../fonts/Ubuntu/Ubuntu-Bold", 700);
 
-@include font-face("DMSans", "../fonts/DMSans/DMSans-Regular", 400);
-@include font-face("DMSans", "../fonts/DMSans/DMSans-Medium", 500);
-@include font-face("DMSans", "../fonts/DMSans/DMSans-Bold", 700);
-
-@include font-face("Poppins", "../fonts/Poppins/Poppins-Bold", 700);
+@include font-face("Lato", "../fonts/Lato/Lato-Bold", 700);
+@include font-face("Lato", "../fonts/Lato/Lato-Black", 800);
