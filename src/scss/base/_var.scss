@@ -11,6 +11,10 @@
 	// Sizes
 	--container-width: 1230px;
 	--header-height: 92px;
+
+	@media (max-width: 1024px) {
+		--header-height: 70px;
+	}
 	// Fonts
 	--arial-font: Arial, "Helvetica Neue", Helvetica, sans-serif;
 	--main-font: "Ubuntu", sans-serif;

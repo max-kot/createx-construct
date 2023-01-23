@@ -58,13 +58,6 @@ body {
 	padding: 0 15px;
 	margin: 0 auto;
 }
-.container--pagination {
-	@media (max-width: 1140px) {
-		max-width: unset;
-		padding: unset;
-		margin: unset;
-	}
-}
 
 /*--- Elements ---*/
 .accent-text {
