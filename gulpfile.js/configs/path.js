@@ -49,6 +49,7 @@ const path = {
 		all: {
 			src: [
 				pathSrc + '/**/*.*',
+				pathSrc + '/img/**/sprite.svg',
 				'!./src/html/**/*.html',
 				'!./src/*.html',
 				'!./src/css/*.css',
@@ -65,7 +66,10 @@ const path = {
 	},
 
 	img: {
-		src: pathSrc + '/img/**/*.{png,jpg,jpeg,gif,svg}',
+		src: [
+			pathSrc + '/img/**/*.{png,jpg,jpeg,gif,svg}',
+			'!./src/img/**/sprite.svg',
+		],
 		dest: pathDest + '/img',
 	},
 
