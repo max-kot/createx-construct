@@ -123,12 +123,15 @@
 		font-weight: 400;
 		font-size: rem(18);
 		transition: all 0.3s;
+		background-position: center left;
+		background-size: 40px;
+		background-repeat: no-repeat;
+		background-color: var(--white-color);
 
 		@media (max-width: 1024px) {
-			background-color: var(--white-color);
-			background-size: 35px;
 			padding: unset;
 			background-position: center;
+			background-size: 35px;
 			width: 55px;
 			height: 55px;
 			overflow: hidden;
@@ -150,7 +153,7 @@
 	}
 
 	&__item--phone {
-		background: url("../img/icons/phone.svg") top left/40px no-repeat;
+		background-image: url("../img/icons/phone.svg");
 	}
 
 	&__text {
@@ -164,7 +167,7 @@
 	}
 
 	&__item--email {
-		background: url("../img/icons/chat.svg") top left/40px no-repeat;
+		background-image: url("../img/icons/chat.svg");
 	}
 }
 
