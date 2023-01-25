@@ -717,7 +717,7 @@ body.scroll-up .header {
 }
 .video-section__video-box {
   position: relative;
-  aspect-ratio: 16/7;
+  aspect-ratio: 16/9;
   border-radius: 4px;
   overflow: hidden;
 }
@@ -785,10 +785,6 @@ body.scroll-up .header {
     width: 60px;
     height: 60px;
   }
-}
-.video-section__btn-play svg {
-  margin-left: 10px;
-  margin-top: 2px;
 }
 .video-section__btn-mute {
   width: 40px;
