@@ -4,4 +4,4 @@
 import "./modules/_header-height.js";
 import "./modules/_menu.js";
 import "./modules/_swiper.js";
-console.log('test')
+import "./modules/_video-controls.js";

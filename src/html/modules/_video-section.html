@@ -10,18 +10,19 @@
 		</div>
 		<div class="video-section__video-box">
 			<div class="video-section__video-overlay">
-				<img src="./img/video-poster.jpg" alt="poster">
+				<!--<img src="./img/video-poster.jpg" alt="poster">-->
+				<button class="video-section__btn video-section__btn-play" role="button">
+					<svg width="26px" height="26px">
+						<use xlink:href="./img/icons/sprite.svg#play-btn"></use>
+					</svg>
+				</button>
+				<button class="video-section__btn video-section__btn-mute" role="button">
+					<svg width="14px" height="14px">
+						<use xlink:href="./img/icons/sprite.svg#mute-btn"></use>
+					</svg>
+				</button>
 			</div>
-			<button class="video-section__btn video-section__btn-play" role="button">
-				<svg width="26px" height="26px">
-					<use xlink:href="./img/icons/sprite.svg#play-btn"></use>
-				</svg>
-			</button>
-			<button class="video-section__btn video-section__btn-mute" role="button">
-				<svg width="14px" height="14px">
-					<use xlink:href="./img/icons/sprite.svg#mute-btn"></use>
-				</svg>
-			</button>
+
 			<video class="video-section__video" width="100%" height="500px" muted>
 				<source src="./video/video.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
 				Элемент video не поддерживается вашим браузером.
