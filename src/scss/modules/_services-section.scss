@@ -1,0 +1,9 @@
+.services-section {
+	padding-top: 212px;
+	padding-bottom: 80px;
+	@media (max-width: 768px) {
+		padding: 130px 0 30px;
+	}
+	&__heading {
+	}
+}
