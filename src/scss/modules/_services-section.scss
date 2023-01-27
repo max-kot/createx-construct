@@ -1,9 +1,129 @@
 .services-section {
 	padding-top: 212px;
 	padding-bottom: 80px;
+	background: url("../img/services/bg.svg") center/cover no-repeat #f4f5f7;
+
 	@media (max-width: 768px) {
 		padding: 130px 0 30px;
 	}
+
 	&__heading {
+	}
+
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
+		grid-template-rows: 285px;
+		grid-auto-rows: 285px;
+		gap: 30px;
+		@media (max-width: 768px) {
+			gap: 15px;
+		}
+		&:not(:last-child) {
+			margin-bottom: 80px;
+			@media (max-width: 768px) {
+				margin-bottom: 40px;
+			}
+		}
+	}
+
+	&__item {
+		position: relative;
+		background: var(--light-color);
+		@include flex-col-c;
+		padding: 15px;
+		border: 1px solid #e5e8ed;
+		box-shadow: 0px 80px 80px -20px rgba(154, 156, 165, 0.08), 0px 30px 24px -10px rgba(154, 156, 165, 0.05),
+			0px 12px 10px -6px rgba(154, 156, 165, 0.04), 0px 4px 4px -4px rgba(30, 33, 44, 0.03);
+		border-radius: 4px;
+		&:hover {
+			.services-section__image {
+				opacity: 1;
+			}
+
+			.services-section__icon,
+			.services-section__title {
+				color: var(--light-color);
+			}
+		}
+	}
+
+	&__image {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		opacity: 0;
+		transition: opacity 0.3s;
+		z-index: 1;
+		&::before {
+			content: "";
+			position: absolute;
+			z-index: 2;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: #1e212c;
+			opacity: 0.6;
+		}
+		img,
+		source {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__wrapper {
+		@include flex-col-c;
+		position: relative;
+		z-index: 2;
+	}
+
+	&__icon {
+		color: var(--primary-color);
+		transition: all 0.3s;
+		&:not(:last-child) {
+			margin-bottom: 25px;
+		}
+		svg {
+			fill: currentColor;
+		}
+	}
+
+	&__title {
+		padding: 0;
+		margin: 0;
+		color: var(--title-color);
+		font-weight: 700;
+		font-size: rem(20);
+		line-height: 150%;
+		text-align: center;
+		transition: all 0.3s;
+	}
+
+	&__view {
+		@include flex-all-c;
+		flex-wrap: wrap;
+		margin: -5px -20px;
+		& > * {
+			margin: 5px 20px;
+		}
+	}
+
+	&__view-title {
+		text-align: center;
+	}
+
+	&__link {
+		@media (max-width: 768px) {
+			flex-grow: 1;
+			justify-content: center;
+		}
 	}
 }
