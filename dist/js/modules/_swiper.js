@@ -1,6 +1,6 @@
 import "../../../node_modules/swiper/swiper-bundle.js";
 
-const swiper = new Swiper('.hero-slider', {
+const heroSlider = new Swiper('.hero-slider', {
 	loop: true,
 	autoHeight: true,
 	autoplay: true,
@@ -32,3 +32,27 @@ const swiper = new Swiper('.hero-slider', {
 		}
 	}
 });
+
+const projectSlider = new Swiper('.project-slider', {
+	loop: true,
+	spaceBetween: 30,
+	slidesPerView: 1,
+	navigation: {
+		nextEl: '.project-slider__btn-next',
+		prevEl: '.project-slider__btn-prev',
+	},
+
+	breakpoints: {
+		1025: {
+			slidesPerView: 3,
+		},
+
+		769: {
+			slidesPerView: 2,
+		},
+
+		551: {
+			slidesPerView: 2,
+		},
+	}
+})
