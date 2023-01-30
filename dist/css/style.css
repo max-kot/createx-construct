@@ -276,6 +276,88 @@ body {
   font-size: 1.125rem;
 }
 
+.heading--btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  text-align: left;
+  max-width: unset;
+}
+@media (max-width: 768px) {
+  .heading--btn {
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: unset;
+  }
+}
+.heading--btn .heading__title {
+  flex: 0 1 705px;
+}
+@media (max-width: 768px) {
+  .heading--btn .heading__title {
+    flex: 1 1 auto;
+  }
+}
+.heading--btn .heading__btn-box {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+@media (max-width: 768px) {
+  .heading--btn .heading__btn-box {
+    margin-bottom: unset;
+  }
+}
+.heading--btn .heading__btn {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: var(--menu-color);
+  transition: all 0.3s;
+}
+.heading--btn .heading__btn:hover {
+  background: var(--primary-color);
+  color: var(--light-color);
+}
+.heading--btn .heading__btn svg {
+  width: 18px;
+  height: 12px;
+  fill: currentColor;
+}
+.bottom-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: -5px -20px;
+}
+.bottom-block > * {
+  margin: 5px 20px;
+}
+.bottom-block__title {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  font-family: var(--main-font);
+  font-weight: 700;
+  font-size: 1.75rem;
+  line-height: 150%;
+  color: var(--title-color);
+}
+@media (max-width: 500px) {
+  .bottom-block__title {
+    font-size: 1.375rem;
+  }
+}
+@media (max-width: 768px) {
+  .bottom-block__link {
+    justify-content: center;
+  }
+}
+
 .header {
   padding: 20px 0;
   position: fixed;
@@ -1092,26 +1174,119 @@ body.scroll-up .header {
   text-align: center;
   transition: all 0.3s;
 }
-.services-section__view {
+
+.project-section {
+  padding: 120px 0;
+}
+@media (max-width: 1024px) {
+  .project-section {
+    padding: 60px 0;
+  }
+}
+@media (max-width: 768px) {
+  .project-section {
+    padding: 30px 0;
+  }
+}
+.project-section__heading {
+  position: relative;
+  z-index: 2;
+}
+.project-section__heading:not(:last-child) {
+  margin-bottom: 35px;
+}
+@media (max-width: 768px) {
+  .project-section__heading:not(:last-child) {
+    margin-bottom: 15px;
+  }
+}
+.project-section__slider:not(:last-child) {
+  margin-bottom: 80px;
+}
+@media (max-width: 1024px) {
+  .project-section__slider:not(:last-child) {
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 768px) {
+  .project-section__slider:not(:last-child) {
+    margin-bottom: 15px;
+  }
+}
+.project-slider {
+  margin: -50px -20px;
+  padding: 50px 20px;
+  overflow: hidden;
+}
+.project-card {
+  position: relateive;
+  min-height: 440px;
+  box-shadow: 0px 3px 6px 2px rgba(154, 156, 165, 0.2);
+  border-radius: 4px;
+  overflow: hidden;
+  display: block;
+  color: inherit;
+}
+@media (max-width: 1024px) {
+  .project-card {
+    min-height: 340px;
+  }
+}
+.project-card:hover .project-card__content {
+  bottom: 0;
+}
+.project-card__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+.project-card__image img,
+.project-card__image source {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.project-card__content {
+  position: absolute;
+  z-index: 2;
+  bottom: -90px;
+  left: 0;
+  right: 0;
+  background-color: var(--light-color);
+  min-height: 95px;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  margin: -5px -20px;
-}
-.services-section__view > * {
-  margin: 5px 20px;
-}
-.services-section__view-title {
+  flex-direction: column;
   text-align: center;
+  line-height: 150%;
+  padding: 24px 10px;
+  transition: bottom 0.3s;
 }
-@media (max-width: 768px) {
-  .services-section__link {
-    flex-grow: 1;
-    justify-content: center;
-  }
+.project-card__title {
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--title-color);
 }
-
+.project-card__title:not(:last-child) {
+  margin-bottom: 4px;
+}
+.project-card__text {
+  margin: 0;
+  padding: 0;
+  font-size: 0.875rem;
+}
+.project-card__text:not(:last-child) {
+  margin-bottom: 24px;
+}
 .form__label {
   display: flex;
   flex-direction: column;

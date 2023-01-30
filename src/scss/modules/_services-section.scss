@@ -106,24 +106,4 @@
 		text-align: center;
 		transition: all 0.3s;
 	}
-
-	&__view {
-		@include flex-all-c;
-		flex-wrap: wrap;
-		margin: -5px -20px;
-		& > * {
-			margin: 5px 20px;
-		}
-	}
-
-	&__view-title {
-		text-align: center;
-	}
-
-	&__link {
-		@media (max-width: 768px) {
-			flex-grow: 1;
-			justify-content: center;
-		}
-	}
 }
