@@ -56,3 +56,15 @@ const projectSlider = new Swiper('.project-slider', {
 		},
 	}
 })
+
+const reviewSlider = new Swiper('.review-slider', {
+	loop: true,
+	slidesPerView: 1,
+	//autoHeight: true,
+	autoplay: true,
+	speed: 800,
+	navigation: {
+		nextEl: '.review-slider__btn-next',
+		prevEl: '.review-slider__btn-prev',
+	},
+})
