@@ -1462,7 +1462,56 @@ body.scroll-up .header {
   padding-top: 180px;
   padding-bottom: 90px;
   background-color: var(--light-color);
+  background-image: url("../img/facts/decor.png");
+  background-position-y: -500px;
+  background-position-x: left;
+  background-size: auto;
+  background-repeat: no-repeat;
 }
+@media (max-width: 1024px) {
+  .facts {
+    padding-top: 120px;
+    padding-bottom: 60px;
+  }
+}
+@media (max-width: 768px) {
+  .facts {
+    padding-bottom: 30px;
+  }
+}
+.facts__list {
+  display: grid;
+  max-width: 860px;
+  margin: 0 auto;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px 35px;
+}
+@media (max-width: 1024px) {
+  .facts__list {
+    gap: 15px;
+  }
+}
+.facts__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100%;
+}
+.facts__circle-progress:not(:last-child) {
+  margin-bottom: 20px;
+}
+.facts__title {
+  padding: 0;
+  margin: 0;
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 150%;
+  text-align: center;
+  color: var(--title-color);
+  flex: 1 1 auto;
+}
+
 .form__label {
   display: flex;
   flex-direction: column;
@@ -1488,10 +1537,45 @@ body.scroll-up .header {
   text-align: center;
   justify-content: center;
 }
+
+.circle-progress {
+  --strokeWidth: 10px;
+  --bgColor: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 148px;
+  height: 148px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+}
+.circle-progress::before {
+  content: "";
+  position: absolute;
+  top: var(--strokeWidth);
+  bottom: var(--strokeWidth);
+  left: var(--strokeWidth);
+  right: var(--strokeWidth);
+  border-radius: 50%;
+  background: var(--bgColor);
+  z-index: 2;
+}
+.circle-progress__value {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  z-index: 3;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 150%;
+  color: var(--title-color);
+}
 @supports (-webkit-appearance:none){
 .header-contacts__item--phone{background-image:url("../img/icons/phone.svg")}
 .header-contacts__item--email{background-image:url("../img/icons/chat.svg")}
 .services-section{background:url("../img/services/bg.svg") center/cover no-repeat #f4f5f7}
+.facts{background-image:url("../img/facts/decor.webp")}
 }
 
  @media (max-width: 1024px){
