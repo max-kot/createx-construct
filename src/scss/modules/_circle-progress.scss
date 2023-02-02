@@ -1,0 +1,34 @@
+.circle-progress {
+	--strokeWidth: 10px;
+	--bgColor: #fff;
+	@include flex-all-c;
+	width: 148px;
+	height: 148px;
+	border-radius: 50%;
+	overflow: hidden;
+
+	position: relative;
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: var(--strokeWidth);
+		bottom: var(--strokeWidth);
+		left: var(--strokeWidth);
+		right: var(--strokeWidth);
+		border-radius: 50%;
+		background: var(--bgColor);
+		z-index: 2;
+	}
+
+	&__value {
+		margin: 0;
+		padding: 0;
+		position: relative;
+		z-index: 3;
+		font-weight: 700;
+		font-size: rem(32);
+		line-height: 150%;
+		color: var(--title-color);
+	}
+}

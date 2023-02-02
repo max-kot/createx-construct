@@ -2,9 +2,57 @@
 	padding-top: 180px;
 	padding-bottom: 90px;
 	background-color: var(--light-color);
+	background-image: url("../img/facts/decor.png");
+	background-position-y: -500px;
+	background-position-x: left;
+	background-size: auto;
+	background-repeat: no-repeat;
+
+	@media (max-width: 1024px) {
+		padding-top: 120px;
+		padding-bottom: 60px;
+	}
+	@media (max-width: 768px) {
+		padding-bottom: 30px;
+	}
+
 	&__body {
 	}
 
 	&__heading {
+	}
+
+	&__list {
+		display: grid;
+		max-width: 860px;
+		margin: 0 auto;
+		grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+		gap: 20px 35px;
+
+		@media (max-width: 1024px) {
+			gap: 15px;
+		}
+	}
+
+	&__item {
+		@include flex-col-c;
+		min-height: 100%;
+	}
+
+	&__circle-progress {
+		&:not(:last-child) {
+			margin-bottom: 20px;
+		}
+	}
+
+	&__title {
+		padding: 0;
+		margin: 0;
+		font-weight: 400;
+		font-size: rem(18);
+		line-height: 150%;
+		text-align: center;
+		color: var(--title-color);
+		flex: 1 1 auto;
 	}
 }
