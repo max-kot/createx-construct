@@ -66,6 +66,12 @@
 		.project-card__content {
 			bottom: 0;
 		}
+		.project-card__image {
+			img,
+			source {
+				transform: scale(1.1);
+			}
+		}
 	}
 
 	&__image {
@@ -83,6 +89,7 @@
 			height: 100%;
 			width: 100%;
 			object-fit: cover;
+			transition: all 0.3s;
 		}
 	}
 
