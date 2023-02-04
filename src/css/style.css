@@ -592,6 +592,11 @@ body.scroll-up .header {
   transition: top 0.3s;
 }
 
+body.no-scroll .header {
+  top: 0;
+  transition: top 0.3s;
+}
+
 .hero {
   background: var(--menu-color);
 }
@@ -1574,6 +1579,97 @@ body.scroll-up .header {
 .news-section__item--small .news-post__image {
   padding-bottom: 30%;
 }
+.contacts-section {
+  position: relative;
+  padding: 80px 0;
+  background-color: var(--light-color);
+}
+@media (max-width: 1024px) {
+  .contacts-section {
+    padding: 60px 0;
+  }
+}
+@media (max-width: 768px) {
+  .contacts-section {
+    padding: 0 0 30px;
+  }
+}
+.contacts-section__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 768px) {
+  .contacts-section__image {
+    position: relative;
+    height: unset;
+    padding-bottom: 40%;
+  }
+}
+.contacts-section__image img,
+.contacts-section__image source {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.contacts-section__body {
+  position: relative;
+  z-index: 2;
+  max-width: 495px;
+  margin-left: auto;
+  background-color: var(--light-color);
+  padding: 48px 40px;
+  border: 1px solid #e5e8ed;
+  box-shadow: 0px 60px 80px -20px rgba(30, 33, 44, 0.16), 0px 26px 24px -10px rgba(30, 33, 44, 0.1), 0px 12px 10px -6px rgba(30, 33, 44, 0.08), 0px 4px 4px -4px rgba(30, 33, 44, 0.05);
+  border-radius: 4px;
+}
+@media (max-width: 768px) {
+  .contacts-section__body {
+    max-width: 100%;
+    margin-top: -15%;
+  }
+}
+@media (max-width: 550px) {
+  .contacts-section__body {
+    padding: 20px 15px;
+  }
+}
+.contacts-section__title {
+  text-align: center;
+}
+.contacts-section__title:not(:last-child) {
+  margin-bottom: 24px;
+}
+.contacts-section__form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.contacts-section__form > *:not(.form__btn) {
+  width: 100%;
+}
+.contacts-section__form > *:not(:last-child) {
+  margin-bottom: 20px;
+}
+.contacts-section__form .form__textarea {
+  min-height: 66px;
+  overflow: auto;
+}
+.contacts-section__form .form__checkbox-label:not(:last-child) {
+  margin-bottom: 24px;
+}
+@media (max-width: 768px) {
+  .contacts-section__form .form__btn {
+    width: 100%;
+  }
+}
+
 .form__label {
   display: flex;
   flex-direction: column;
@@ -1598,6 +1694,39 @@ body.scroll-up .header {
 .form__btn {
   text-align: center;
   justify-content: center;
+}
+.form__checkbox-label {
+  display: flex;
+  cursor: pointer;
+}
+.form__checkbox-label > *:not(:last-child) {
+  margin-right: 12px;
+}
+.form__checkbox {
+  display: none;
+}
+.form__checkbox:checked ~ .form__checkbox-icon {
+  background-color: var(--primary-color);
+  background-image: url("../img/icons/check.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 10px 8px;
+  border: 1px solid var(--primary-color);
+}
+.form__checkbox-icon {
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  background: #ffffff;
+  border: 1px solid #b3b7bc;
+  border-radius: 3px;
+}
+.form__checkbox-text {
+  padding: 0;
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 150%;
+  color: var(--menu-color);
 }
 
 .circle-progress {

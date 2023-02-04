@@ -250,3 +250,10 @@ body.scroll-up {
 		transition: top 0.3s;
 	}
 }
+
+body.no-scroll {
+	.header {
+		top: 0;
+		transition: top 0.3s;
+	}
+}
