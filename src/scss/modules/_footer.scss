@@ -1,12 +1,22 @@
 .footer {
 	padding: 80px 0;
 	background-color: var(--dark-color);
+	@media (max-width: 1024px) {
+		padding: 60px 0;
+	}
+	@media (max-width: 768px) {
+		padding: 30px 0;
+	}
 
 	&__body {
 		color: var(--main-dark-color);
 
 		& > *:not(:last-child) {
 			margin-bottom: 50px;
+
+			@media (max-width: 768px) {
+				margin-bottom: 20px;
+			}
 		}
 	}
 
@@ -17,8 +27,12 @@
 		margin: -10px -15px;
 
 		& > * {
-			flex: 1 0 43%;
+			flex: 0 1 45%;
 			padding: 10px 15px;
+
+			@media (max-width: 768px) {
+				flex: 1 1 100%;
+			}
 		}
 	}
 
@@ -142,12 +156,23 @@
 	}
 }
 .footer-middle {
+	align-items: start;
 	&__address-box {
-		flex: 0 1 37%;
+		flex: 0 1 35%;
+		@media (max-width: 768px) {
+			flex: 1 1 100%;
+		}
 	}
 
 	&__nav {
 		flex: 0 1 20%;
+		align-self: stretch;
+		@media (max-width: 1024px) {
+			flex: 0 1 25%;
+		}
+		@media (max-width: 768px) {
+			flex: 1 1 100%;
+		}
 	}
 }
 .address-box {
@@ -189,12 +214,59 @@
 
 .footer-nav {
 	&__title {
+		@media (max-width: 768px) {
+			border: 2px solid var(--light-color);
+			padding: 5px 10px;
+			padding-right: 45px;
+			font-size: rem(18);
+			position: relative;
+
+			&::after,
+			&::before {
+				content: "";
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				background: var(--light-color);
+				width: 25px;
+				height: 2px;
+				transition: all 0.3s;
+			}
+			&::after {
+				right: 10px;
+				transform: rotate(90deg);
+			}
+			&::before {
+				right: 10px;
+			}
+
+			&.active {
+				&::after {
+					transform: rotate(45deg);
+				}
+				&::before {
+					transform: rotate(-45deg);
+				}
+			}
+		}
+
 		&:not(:last-child) {
 			margin-bottom: 13px;
+			@media (max-width: 768px) {
+				margin-bottom: unset;
+			}
+		}
+		@media (max-width: 768px) {
+			& + * {
+				margin-top: 10px;
+			}
 		}
 	}
 
 	&__list {
+		&.hidden {
+			display: none;
+		}
 	}
 
 	&__item {
@@ -207,7 +279,9 @@
 		color: var(--main-dark-color);
 		text-decoration: none;
 		transition: all 0.3s;
-
+		@media (max-width: 768px) {
+			font-size: rem(18);
+		}
 		&:hover {
 			color: var(--primary-color);
 		}
@@ -225,6 +299,9 @@
 	}
 
 	&__top-link {
+		@media (max-width: 1024px) {
+			padding-right: 80px;
+		}
 	}
 }
 .copyright-icon {
@@ -232,6 +309,7 @@
 .top-link {
 	display: flex;
 	align-items: flex-end;
+
 	text-decoration: none;
 	text-transform: uppercase;
 	color: var(--light-color);
@@ -262,7 +340,6 @@
 		background: var(--primary-color);
 		border-radius: 4px;
 		transition: all 0.3s;
-
 		svg {
 			fill: var(--light-color);
 			transition: all 0.3s;
