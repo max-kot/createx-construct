@@ -216,7 +216,7 @@
 	&__title {
 		@media (max-width: 768px) {
 			border: 2px solid var(--light-color);
-			padding: 5px 10px;
+			padding: 8px 10px;
 			padding-right: 45px;
 			font-size: rem(18);
 			position: relative;
@@ -264,8 +264,14 @@
 	}
 
 	&__list {
-		&.hidden {
+		@media (max-width: 768px) {
 			display: none;
+		}
+
+		@media (max-width: 768px) {
+			&.active {
+				display: block;
+			}
 		}
 	}
 
