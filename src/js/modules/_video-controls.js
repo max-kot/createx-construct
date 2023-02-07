@@ -3,8 +3,6 @@ const videoBtnMute = document?.querySelector('.video-section__btn-mute');
 const videoBlock = document?.querySelector('.video-section__video');
 const videoOverlay = document?.querySelector('.video-section__video-overlay');
 
-console.log(videoBtnPlay)
-
 const toggleOverlay = (event) => {
 	if (event.type === 'mouseleave') {
 		videoOverlay.classList.add('hidden')
