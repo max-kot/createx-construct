@@ -1,0 +1,96 @@
+.cover {
+	padding-top: calc(80px + var(--header-height)) ;
+	padding-bottom: 80px;
+	min-height: 600px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+
+	@media (max-width: 1440px){
+		min-height: 100%;
+	}
+	@media (max-width: 1024px){
+		padding-top: calc(60px + var(--header-height)) ;
+		padding-bottom: 60px;
+	}
+	@media (max-width: 768px){
+		padding-top: calc(30px + var(--header-height)) ;
+		padding-bottom: 30px;
+	}
+
+	&__body {
+		max-width: 600px;
+	}
+
+	&__breadcrums {
+		&:not(:last-child) {
+			margin-bottom: 40px;
+			@media (max-width: 1024px){
+				margin-bottom: 25px;
+			}
+		}
+	}
+
+	&__title {
+		padding: 0;
+		margin: 0;
+		color: var(--dark-color);
+		text-transform: uppercase;
+		line-height: 130%;
+		font-size: rem(72);
+		@media (max-width: 1024px){
+			font-size: rem(52);
+		}
+		@media (max-width: 768px){
+			font-size: rem(40);
+		}
+		&:not(:last-child) {
+			margin-bottom: 24px;
+			@media (max-width: 1024px){
+				margin-bottom: 15px;
+			}
+		}
+	}
+
+	&__text {
+		padding: 0;
+		margin: 0;
+		font-size: rem(20);
+		line-height: 150%;
+		@media (max-width: 1024px){
+			font-size: rem(18);
+		}
+		@media (max-width: 768px){
+			font-size: rem(16);
+		}
+	}
+}
+.breadcrums {
+	display: flex;
+	&__item {
+		&:not(:last-child) {
+			margin-right: 8px;
+			&::after {
+				content: '/';
+				margin-left: 8px;
+			}
+		}
+	}
+
+	&__link {
+		text-decoration: none;
+		color: inherit;
+		font-size: rem(14);
+		line-height: 150%;
+		transition: all 0.3s;
+		color: var(--menu-color);
+
+		&:hover{
+			color: var(--primary-color);
+		}
+		
+	}
+	&__link--active {
+		color: var(--main-color);
+	}
+}
