@@ -88,7 +88,15 @@ body {
 		border-color: var(--primary-color);
 	}
 }
-
+.btn--stroke {
+	background: transparent;
+	color: var(--primary-color);
+	border-color: var(--primary-color);
+	&:hover {
+		background: var(--primary-color);
+		color: var(--light-color);
+	}
+}
 .btn--hover-white {
 	&:hover {
 		border-color: var(--light-color);
