@@ -1,10 +1,9 @@
-const allBtnAccordion = document?.querySelectorAll('.footer-nav__title');
-const allListAccordion = document?.querySelectorAll('.footer-nav__list');
+const allAccordionBtn = document?.querySelectorAll('.accordion-btn');
 
-allBtnAccordion.forEach((btnAccordion) => {
-	btnAccordion.addEventListener('click', () => {
-		btnAccordion.classList.toggle('active');
-		btnAccordion.nextElementSibling.classList.toggle('active')
+allAccordionBtn?.forEach((accordionBtn) => {
+	accordionBtn?.addEventListener('click', ()=> {
+		accordionBtn.classList.toggle('active');
+		accordionBtn.nextElementSibling.classList.toggle('active');
 	})
 })
 
