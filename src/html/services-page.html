@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	@@include('./base/head.html', {
+	"title": 'Createx Constract | Page'
+	})
+</head>
+
+<body>
+	<div class="wrapper">
+		@@include('./modules/_header.html')
+		<main class="main">
+			<section class="cover" style="background-image: url('./img/cover/services.jpg')">
+				<div class="container">
+					<div class="cover__body">
+						<ul class="cover__breadcrums list-reset breadcrums">
+							<li class="breadcrums__item">
+								<a class="breadcrums__link" href="#">Homepage</a>
+							</li>
+							<li class="breadcrums__item">
+								<a class="breadcrums__link" href="#">Services</a>
+							</li>
+							<li class="breadcrums__item">
+								<a class="breadcrums__link breadcrums__link--active" href="#">Interior Design</a>
+							</li>
+						</ul>
+						<h1 class="cover__title">
+							Interior Design
+						</h1>
+						<p class="cover__text">
+							Dui augue nec mi mi. Ut ac lectus donec fames pellentesque. Laoreet aenean vulputate elementum blandit amet.
+						</p>
+					</div>
+				</div>
+			</section>
+			@@include('./modules/_process.html')
+			@@include('./modules/_contacts-section.html')
+		</main>
+		@@include('./modules/_footer.html')
+	</div>
+	@@include('./base/scripts.html')
+</body>
+
+</html>
