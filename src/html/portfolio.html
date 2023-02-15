@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	@@include('./base/head.html', {
+	"title": 'Createx Constract | Page'
+	})
+</head>
+
+<body>
+	<div class="wrapper">
+		@@include('./modules/_header.html')
+		<main class="main">
+			@@include('./modules/_cover.html', {
+			"bglink": "./img/cover/portfolio.jpg",
+			"title": "Our work",
+			"link" : {
+			name: "Work",
+			href: "#",
+			},
+			"text": "Our portfolio represents 20 years of construction experience backed by a passion for perfect client service, quality and innovations in consctuction industry.",
+			})
+			@@include('./modules/_reviews.html')
+			@@include('./modules/_clients.html', {
+				"class": 'clients--white'
+			})
+			@@include('./modules/_contacts-section.html')
+			
+		</main>
+		@@include('./modules/_footer.html')
+	</div>
+	@@include('./base/scripts.html')
+</body>
+
+</html>
