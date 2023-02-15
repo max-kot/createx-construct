@@ -13,9 +13,15 @@
 	// Sizes
 	--container-width: 1230px;
 	--header-height: 92px;
+	--cover-padding-top: calc(80px + var(--header-height));
+	
 
 	@media (max-width: 1024px) {
 		--header-height: 70px;
+		--cover-padding-top: calc(60px + var(--header-height));
+	}
+	@media (max-width: 768px) {
+		--cover-padding-top: calc(30px + var(--header-height));
 	}
 	// Fonts
 	--arial-font: Arial, "Helvetica Neue", Helvetica, sans-serif;

@@ -1,5 +1,5 @@
 .cover {
-	padding-top: calc(80px + var(--header-height)) ;
+	padding-top: var(--cover-padding-top) ;
 	padding-bottom: 80px;
 	min-height: 600px;
 	background-repeat: no-repeat;

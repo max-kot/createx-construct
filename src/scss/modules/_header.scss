@@ -5,9 +5,15 @@
 	width: 100%;
 	top: 0;
 	z-index: 55;
-	background: var(--light-color);
 	transition: top 0.3s;
-	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+
+	&--white{
+		background: var(--light-color);
+		box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+
+
+	}
+
 	&__body {
 		@include flex-aic;
 
@@ -127,9 +133,9 @@
 		background-position: center left;
 		background-size: 40px;
 		background-repeat: no-repeat;
-		background-color: var(--light-color);
 
 		@media (max-width: 1024px) {
+			background-color: var(--light-color);
 			padding: unset;
 			background-position: center;
 			background-size: 35px;
