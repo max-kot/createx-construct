@@ -1,4 +1,4 @@
-if (document?.querySelector('header')) {
+if (document?.querySelector('.cover')) {
 
 	const header = document?.querySelector('header');
 	const cover = document?.querySelector('.cover');
