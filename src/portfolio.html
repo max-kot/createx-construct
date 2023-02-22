@@ -86,7 +86,7 @@
 	<div class="container">
 		<div class="portfolio__body">
 			<div class="portfolio__tabs portfolio-tabs">
-				<button class="portfolio-tabs__btn active" role="button">
+				<button class="portfolio-tabs__btn active" role="button" data-filter-tab="all">
 					<svg class="portfolio-tabs__btn-icon" height="48px" width="48px">
 						<use xlink:href="./img/icons/sprite.svg#home"></use>
 					</svg>
@@ -94,7 +94,7 @@
 						All Projects
 					</span>
 				</button>
-				<button class="portfolio-tabs__btn" role="button">
+				<button class="portfolio-tabs__btn" role="button" data-filter-tab="construction">
 					<svg class="portfolio-tabs__btn-icon" width="53px" height="50px">
 						<use xlink:href="./img/icons/sprite.svg#construct"></use>
 					</svg>
@@ -102,7 +102,7 @@
 						Construction
 					</span>
 				</button>
-				<button class="portfolio-tabs__btn" role="button">
+				<button class="portfolio-tabs__btn" role="button" data-filter-tab="plan">
 					<svg class="portfolio-tabs__btn-icon" width="53px" height="52px">
 						<use xlink:href="./img/icons/sprite.svg#plan"></use>
 					</svg>
@@ -110,7 +110,7 @@
 						Project Development
 					</span>
 				</button>
-				<button class="portfolio-tabs__btn" role="button">
+				<button class="portfolio-tabs__btn" role="button" data-filter-tab="design">
 					<svg class="portfolio-tabs__btn-icon" width="53px" height="52px">
 						<use xlink:href="./img/icons/sprite.svg#design"></use>
 					</svg>
@@ -118,7 +118,7 @@
 						Interior Design
 					</span>
 				</button>
-				<button class="portfolio-tabs__btn" role="button">
+				<button class="portfolio-tabs__btn" role="button" data-filter-tab="repairs">
 					<svg class="portfolio-tabs__btn-icon" width="53px" height="52px">
 						<use xlink:href="./img/icons/sprite.svg#repairs"></use>
 					</svg>
@@ -128,7 +128,7 @@
 				</button>
 			</div>
 			<ul class="portfolio__list portfolio-list list-reset">
-				<li class="portfolio-list__item">
+				<li class="portfolio-list__item active" data-filter-item="all construction">
 					<a class="portfolio-list__card project-card" href="#">
 						<div class="project-card__image">
 							<img src="./img/project/img-1.jpg" alt="Slide">
@@ -144,7 +144,7 @@
 						</div>
 					</a>
 				</li>
-				<li class="portfolio-list__item">
+				<li class="portfolio-list__item active" data-filter-item="all plan">
 					<a class="portfolio-list__card project-card" href="#">
 						<div class="project-card__image">
 							<img src="./img/project/img-2.jpg" alt="Slide">
@@ -160,7 +160,7 @@
 						</div>
 					</a>
 				</li>
-				<li class="portfolio-list__item">
+				<li class="portfolio-list__item active" data-filter-item="all repairs">
 					<a class="portfolio-list__card project-card" href="#">
 						<div class="project-card__image">
 							<img src="./img/project/img-3.jpg" alt="Slide">
@@ -176,7 +176,7 @@
 						</div>
 					</a>
 				</li>
-				<li class="portfolio-list__item">
+				<li class="portfolio-list__item active" data-filter-item="all design">
 					<a class="portfolio-list__card project-card" href="#">
 						<div class="project-card__image">
 							<img src="./img/project/img-4.jpg" alt="Slide">
@@ -192,7 +192,7 @@
 						</div>
 					</a>
 				</li>
-				<li class="portfolio-list__item">
+				<li class="portfolio-list__item active" data-filter-item="all plan design">
 					<a class="portfolio-list__card project-card" href="#">
 						<div class="project-card__image">
 							<img src="./img/project/img-5.jpg" alt="Slide">
@@ -208,7 +208,7 @@
 						</div>
 					</a>
 				</li>
-				<li class="portfolio-list__item">
+				<li class="portfolio-list__item active" data-filter-item="all repairs plan design">
 					<a class="portfolio-list__card project-card" href="#">
 						<div class="project-card__image">
 							<img src="./img/project/img-7.jpg" alt="Slide">
@@ -224,7 +224,7 @@
 						</div>
 					</a>
 				</li>
-				<li class="portfolio-list__item">
+				<li class="portfolio-list__item active" data-filter-item="all construction repairs">
 					<a class="portfolio-list__card project-card" href="#">
 						<div class="project-card__image">
 							<img src="./img/project/img-3.jpg" alt="Slide">
@@ -240,7 +240,7 @@
 						</div>
 					</a>
 				</li>
-				<li class="portfolio-list__item">
+				<li class="portfolio-list__item active" data-filter-item="all repairs">
 					<a class="portfolio-list__card project-card" href="#">
 						<div class="project-card__image">
 							<img src="./img/project/img-2.jpg" alt="Slide">
@@ -256,7 +256,7 @@
 						</div>
 					</a>
 				</li>
-				<li class="portfolio-list__item">
+				<li class="portfolio-list__item active" data-filter-item="all construction">
 					<a class="portfolio-list__card project-card" href="#">
 						<div class="project-card__image">
 							<img src="./img/project/img-1.jpg" alt="Slide">

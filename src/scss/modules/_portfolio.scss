@@ -1,18 +1,30 @@
 .portfolio {
 	padding-bottom: 60px;
+	@media (max-width: 768px){
+		padding-bottom: 30px;
+	}
 	&__body {
 	}
 
 	&__tabs {
 		margin-top: -59px;
+		@media(max-width: 768px){
+			margin-top: -30px;
+		}
 		&:not(:last-child) {
 			margin-bottom: 120px;
+			@media(max-width: 1024px){
+				margin-bottom: 30px;
+			}
 		}
 	}
 
 	&__list {
 		&:not(:last-child) {
 			margin-bottom: 60px;
+			@media(max-width: 768px){
+				margin-bottom: 30px;
+			}
 		}
 	}
 
@@ -49,6 +61,14 @@
 	justify-content: center;
 	margin-right: -10px;
 	margin-left: -10px;
+
+	@media(max-width: 768px){
+		flex-wrap: nowrap;
+		justify-content: flex-start;
+		overflow-y: auto;
+		margin-right: -5px;
+		margin-left: -5px;
+	}
 	&__btn {
 		margin: 10px;
 		border: none;
@@ -64,6 +84,17 @@
 		border-radius: 4px;
 		transition: all 0.3s;
 
+		@media(max-width: 1024px){
+			padding: 15px;
+			flex: 0 0 150px;
+			
+		}
+
+		@media(max-width: 768px){
+			margin: 5px;
+			padding: 10px;
+		}
+		
 		&> *:not(:last-child) {
 			margin-bottom: 10px;
 		}
@@ -101,6 +132,27 @@
 	&__item {
 		padding: 15px;
 		flex: 0 1 33.333%;
+		opacity: 0;
+		position: absolute;
+		z-index: -1;
+		visibility: hidden;
+		transition: all 1s;
+
+		@media (max-width: 1024px){
+			flex: 0 1 50%;
+		}
+		
+		@media (max-width: 600px){
+			flex: 1 1 100%;
+		}
+
+		&.active{
+			opacity: 1;
+			position: relative;
+			z-index: 1;
+			visibility: visible;
+			transition: all 1s;
+		}
 	}
 
 	&__card {

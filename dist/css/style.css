@@ -2584,14 +2584,34 @@ body.no-scroll .header {
 .portfolio {
   padding-bottom: 60px;
 }
+@media (max-width: 768px) {
+  .portfolio {
+    padding-bottom: 30px;
+  }
+}
 .portfolio__tabs {
   margin-top: -59px;
+}
+@media (max-width: 768px) {
+  .portfolio__tabs {
+    margin-top: -30px;
+  }
 }
 .portfolio__tabs:not(:last-child) {
   margin-bottom: 120px;
 }
+@media (max-width: 1024px) {
+  .portfolio__tabs:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
 .portfolio__list:not(:last-child) {
   margin-bottom: 60px;
+}
+@media (max-width: 768px) {
+  .portfolio__list:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 .portfolio__load-link {
   display: flex;
@@ -2622,6 +2642,15 @@ body.no-scroll .header {
   margin-right: -10px;
   margin-left: -10px;
 }
+@media (max-width: 768px) {
+  .portfolio-tabs {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow-y: auto;
+    margin-right: -5px;
+    margin-left: -5px;
+  }
+}
 .portfolio-tabs__btn {
   margin: 10px;
   border: none;
@@ -2635,6 +2664,18 @@ body.no-scroll .header {
   box-shadow: 0px 80px 80px -20px rgba(154, 156, 165, 0.08), 0px 30px 24px -10px rgba(154, 156, 165, 0.05), 0px 12px 10px -6px rgba(154, 156, 165, 0.04), 0px 4px 4px -4px rgba(30, 33, 44, 0.03);
   border-radius: 4px;
   transition: all 0.3s;
+}
+@media (max-width: 1024px) {
+  .portfolio-tabs__btn {
+    padding: 15px;
+    flex: 0 0 150px;
+  }
+}
+@media (max-width: 768px) {
+  .portfolio-tabs__btn {
+    margin: 5px;
+    padding: 10px;
+  }
 }
 .portfolio-tabs__btn > *:not(:last-child) {
   margin-bottom: 10px;
@@ -2668,6 +2709,28 @@ body.no-scroll .header {
 .portfolio-list__item {
   padding: 15px;
   flex: 0 1 33.333%;
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+  visibility: hidden;
+  transition: all 1s;
+}
+@media (max-width: 1024px) {
+  .portfolio-list__item {
+    flex: 0 1 50%;
+  }
+}
+@media (max-width: 600px) {
+  .portfolio-list__item {
+    flex: 1 1 100%;
+  }
+}
+.portfolio-list__item.active {
+  opacity: 1;
+  position: relative;
+  z-index: 1;
+  visibility: visible;
+  transition: all 1s;
 }
 .form__label {
   display: flex;
@@ -2907,6 +2970,14 @@ body.no-scroll .header {
 }
 
  @media (max-width: 550px){
+
+@supports (-webkit-appearance:none){
+
+}
+
+}
+
+ @media (max-width: 600px){
 
 @supports (-webkit-appearance:none){
 
