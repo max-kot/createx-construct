@@ -1,0 +1,269 @@
+.project {
+	padding-top: var(--cover-padding-top);
+	padding-bottom: 120px;
+
+	@media (max-width: 1024px){
+		padding-top: calc(30px + var(--header-height)) ;
+		padding-bottom: 60px;
+	}
+	@media (max-width: 768px){
+		padding-bottom: 30px;
+	}
+
+	&__body {
+	}
+
+	&__breadcrums {
+		&:not(:last-child) {
+			margin-bottom: 40px;
+			@media (max-width: 768px){
+				margin-bottom: 20px;
+			}
+		}
+	}
+
+	&__title {
+		margin: 0;
+		padding: 0;
+		letter-spacing: 1px;
+		font-size: rem(64);
+		line-height: 120%;
+		font-weight: 700;
+		color: var(--dark-color);
+		
+		@media (max-width: 500px) {
+			font-size: rem(30);
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 60px;
+			@media (max-width: 1024px){
+				margin-bottom: 30px;
+			}
+		}
+	}
+
+	&__gallery {
+		&:not(:last-child) {
+			margin-bottom: 100px;
+			@media (max-width: 1024px){
+				margin-bottom: 50px;
+			}
+
+			@media (max-width: 768px){
+				margin-bottom: 25px;
+			}
+		}
+	}
+
+	&__info {
+	}
+}
+.project-gallery {
+	&__slider {
+		&:not(:last-child) {
+			margin-bottom: 20px;
+			@media (max-width: 768px){
+				margin-bottom: 10px;
+			}
+		}
+	}
+
+	&__slider-wrappper {
+	}
+
+	&__slide {
+		border-radius: 4px;
+		overflow: hidden;
+		position: relative;
+		padding-bottom: 41%;
+		@media (max-width: 768px){
+			min-height: 350px;
+			padding-bottom: unset;
+		}
+		img,
+		source {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__thumbs-slider {
+	}
+
+	&__thumbs-slider-wrapper {
+	}
+
+	&__thumbs-slide {
+		width: 100%;
+		padding-bottom: 8%;
+		position: relative;
+		border-radius: 4px;
+		overflow: hidden;
+		cursor: pointer;
+		opacity: 0.6;
+		transition: all 0.3s;
+		@media (max-width: 768px){
+			min-height: 100px;
+			padding-bottom: unset;
+		}
+		img,
+		source {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+		&:hover,
+		&.swiper-slide-thumb-active {
+			opacity: 1;
+		}
+	}
+}
+.project-gallery-slider {
+	&__btn-prev,
+	&__btn-next {
+		width: 48px;
+		height: 48px;
+		background: rgba(255, 255, 255, 0.5);
+		border-radius: 50%;
+		overflow: hidden;
+		color: var(--menu-color);
+		transition: all 0.3s;
+
+		svg {
+			fill: currentColor;
+		}
+
+		&::after {
+			content: "";
+		}
+
+		&.swiper-button-disabled {
+			opacity: 0.5;
+		}
+
+		&:hover {
+			background-color: var(--primary-color);
+			color: var(--light-color);
+		}
+	}
+	&__btn-prev {
+		left: 32px;
+		@media (max-width: 1024px) {
+			left: 10px;
+		}
+	}
+
+	&__btn-next {
+		right: 32px;
+		@media (max-width: 1024px) {
+			right: 10px;
+		}
+	}
+}
+.project-info {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: -15px;
+
+	@media (max-width: 1024px){
+		flex-wrap: wrap;
+	}
+
+	&>*{
+		@media (max-width: 1024px){
+			flex-grow: 1;
+		}
+	}
+
+	&__descr {
+		flex: 0 1 600px;
+		margin: 15px;
+		
+	}
+
+	&__title {
+		margin: 0;
+		padding: 0;
+		font-size: rem(46);
+		line-height: 130%;
+		font-weight: 700;
+		color: var(--dark-color);
+
+		@media (max-width: 500px) {
+			font-size: rem(22);
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 40px;
+			@media (max-width: 768px){
+				margin-bottom: 20px;
+			}
+		}
+	}
+
+	&__text {
+		margin: 0;
+		padding: 0;
+		&:not(:last-child) {
+			margin-bottom: 20px;
+			@media (max-width: 768px){
+				margin-bottom: 10px;
+			}
+		}
+	}
+
+	&__feature {
+		flex: 0 1 495px;
+		margin: 15px !important;
+	}
+}
+.feature-list {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	background-color: var(--light-color);
+	box-shadow: 0px 80px 80px -20px rgba(154, 156, 165, 0.08), 0px 30px 24px -10px rgba(154, 156, 165, 0.05),
+		0px 12px 10px -6px rgba(154, 156, 165, 0.04), 0px 4px 4px -4px rgba(30, 33, 44, 0.03);
+	border-radius: 4px;
+	padding: 40px 60px;
+
+	@media (max-width: 768px){
+		padding: 20px 30px;
+	}
+
+	&__item {
+		display: flex;
+
+		&:not(:last-child) {
+			margin-bottom: 16px;
+		}
+	}
+
+	&__title {
+		padding: 0;
+		margin: 0;
+		flex: 0 0 100px;
+		text-transform: uppercase;
+		font-weight: 700;
+		font-size: rem(16);
+		color: var(--dark-color);
+		&:not(:last-child) {
+			margin-right: 30px;
+		}
+	}
+
+	&__text {
+		padding: 0;
+		margin: 0;
+	}
+}

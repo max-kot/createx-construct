@@ -5,7 +5,8 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
-
+	background-color: var(--light-color);
+	
 	@media (max-width: 1440px){
 		min-height: 100%;
 	}
