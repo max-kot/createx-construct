@@ -68,3 +68,53 @@ const reviewSlider = new Swiper('.reviews-slider', {
 		prevEl: '.reviews-slider__btn-prev',
 	},
 })
+
+
+const projectGalleryThumbsSlider = new Swiper('.project-gallery__thumbs-slider', {
+	slidesPerView: 3,
+	spaceBetween: 10,
+	freeMode: true,
+	watchSlidesProgress: true,
+
+	breakpoints: {
+		1025: {
+			slidesPerView: 10,
+			spaceBetween: 20,
+		},
+
+		769: {
+			spaceBetween: 20,
+			slidesPerView: 5,
+		},
+
+		551: {
+			slidesPerView: 3,
+			spaceBetween: 10,
+		},
+	}
+})
+
+const projectGallerySlider = new Swiper('.project-gallery__slider', {
+	slidesPerView: 1,
+	spaceBetween: 10,
+	navigation: {
+		nextEl: '.project-gallery-slider__btn-next',
+		prevEl: '.project-gallery-slider__btn-prev',
+	},
+	thumbs: {
+		swiper: projectGalleryThumbsSlider,
+	},
+	breakpoints: {
+		1025: {
+			spaceBetween: 20,
+		},
+
+		769: {
+			spaceBetween: 20,
+		},
+
+		551: {
+			spaceBetween: 10,
+		},
+	}
+})
