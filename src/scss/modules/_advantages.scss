@@ -1,0 +1,99 @@
+.advantages {
+	padding: 80px 0 114px;
+	background-color: var(--gray-color);
+
+	@media (max-width: 1024px) {
+		padding: 60px 0;
+	}
+
+	@media (max-width: 768px) {
+		padding: 30px 0;
+	}
+
+	&:last-child {
+		padding-bottom: 240px;
+		@media (max-width: 1024px){
+			padding-bottom: 114px;
+		}
+	}
+
+	&__body {
+		display: flex;
+		justify-content: space-between;
+		margin: -15px;
+
+		@media (max-width: 1024px) {
+			flex-wrap: wrap-reverse;
+		}
+
+		& > * {
+			margin: 15px;
+		}
+	}
+
+	&__image {
+		border-radius: 4px;
+		position: relative;
+		overflow: hidden;
+		flex: 1 1 495px;
+		padding-bottom: 45%;
+		margin-bottom: -174px;
+		@media (max-width: 1024px) {
+			margin-bottom: unset;
+		}
+		img,
+		source {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__content {
+		flex: 1 1 600px;
+	}
+
+	&__title {
+		&:not(:last-child) {
+			margin-bottom: 60px;
+			@media (max-width: 768px) {
+				margin-bottom: 30px;
+			}
+		}
+	}
+
+	&__list {
+		padding: 0;
+		margin: 0;
+		list-style-type: none;
+	}
+
+	&__item {
+		display: flex;
+
+		&:not(:last-child) {
+			margin-bottom: 20px;
+
+			@media (max-width: 768px) {
+				margin-bottom: 10px;
+			}
+		}
+
+		&::before {
+			content: "";
+			flex-shrink: 0;
+			display: inline-block;
+			width: 20px;
+			height: 20px;
+			background-image: url("../img/icons/check-marker.svg");
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center;
+			margin-right: 16px;
+			margin-top: 4px;
+		}
+	}
+}
