@@ -38,9 +38,11 @@
 		flex: 1 1 495px;
 		padding-bottom: 45%;
 		margin-bottom: -174px;
+		
 		@media (max-width: 1024px) {
 			margin-bottom: unset;
 		}
+
 		img,
 		source {
 			position: absolute;

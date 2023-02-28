@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	@@include('./base/head.html', {
+	"title": 'Createx Constract | About us'
+	})
+</head>
+
+<body>
+	<div class="wrapper">
+		@@include('./modules/_header.html')
+		<main class="main">
+			@@include('./modules/_cover.html', {
+			"bglink": "./img/cover/about.jpg",
+			"title": "About us",
+			"link" : {
+			name: "About us",
+			href: "#",
+			},
+			"text": "Createx Construction Bureau has been successfully operating in the USA construction market since 2000. We are proud to offer you quality construction and exemplary service.",
+			})
+			@@include('./modules/_statistics.html')
+			@@include('./modules/_history.html')
+			@@include('./modules/_contacts-section.html')
+
+		</main>
+		@@include('./modules/_footer.html')
+	</div>
+	@@include('./base/scripts.html')
+</body>
+
+</html>
