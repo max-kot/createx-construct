@@ -1,4 +1,4 @@
-import "../../../node_modules/swiper/swiper-bundle.js";
+import '../../../node_modules/swiper/swiper-bundle.js';
 
 const heroSlider = new Swiper('.hero-slider', {
 	loop: true,
@@ -11,9 +11,9 @@ const heroSlider = new Swiper('.hero-slider', {
 		clickable: true,
 		renderBullet: function (index, className) {
 			if (index < 9) {
-				return `<span class="${className}">0${index + 1}</span>`
+				return `<span class='${className}'>0${index + 1}</span>`
 			}
-			return `<span class="${className}">${index + 1}</span>`
+			return `<span class='${className}'>${index + 1}</span>`
 		},
 	},
 
@@ -117,4 +117,42 @@ const projectGallerySlider = new Swiper('.project-gallery__slider', {
 			spaceBetween: 10,
 		},
 	}
+})
+
+const historyThumbSlider = new Swiper('.history-slider__thumb', {
+	slidesPerView: 1,
+	freeMode: true,
+	watchSlidesProgress: true,
+	breakpoints: {
+		550: {
+			slidesPerView: 1,
+			freeMode: true,
+			watchSlidesProgress: true,
+		},
+		769: {
+			slidesPerView: 6,
+			direction: 'vertical',
+			freeMode: true,
+			watchSlidesProgress: true,
+		},
+		1025: {
+			slidesPerView: 9,
+			direction: 'vertical',
+			freeMode: true,
+			watchSlidesProgress: true,
+		},
+	},
+
+})
+
+const historyGallerySlider = new Swiper('.history-slider__gallery', {
+	slidesPerView: 1,
+	//effect: 'fade',
+	navigation: {
+		nextEl: '.history-slider__btn-next',
+		prevEl: '.history-slider__btn-prev',
+	},
+	thumbs: {
+		swiper: historyThumbSlider,
+	},
 })
