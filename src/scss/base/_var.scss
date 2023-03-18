@@ -9,7 +9,7 @@
 	--menu-color: hsl(228, 10%, 29%);
 	--light-color: #fff;
 	--gray-color: #f4f5f7;
-	--gray-700: #787A80;
+	--gray-700: #787a80;
 	--gray-600: #9a9ca5;
 	--light-gray: #d7dadd;
 	// Sizes
@@ -17,7 +17,6 @@
 	--container-paddings: 15px;
 	--header-height: 92px;
 	--cover-padding-top: calc(80px + var(--header-height));
-	
 
 	@media (max-width: 1024px) {
 		--header-height: 70px;
