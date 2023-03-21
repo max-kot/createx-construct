@@ -39,6 +39,10 @@
 	}
 
 	&__link {
+		transition: all 0.3s;
+		&:hover {
+			opacity: 0.7;
+		}
 	}
 
 	&__info {

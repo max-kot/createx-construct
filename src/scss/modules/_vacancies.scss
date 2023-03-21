@@ -1,0 +1,152 @@
+.vacancies {
+	padding: 121px 0 180px;
+	background-color: var(--light-color);
+
+	&__body {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__list {
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+		flex: 0 1 705px;
+
+		&:not(:last-child) {
+			margin-right: 30px;
+		}
+	}
+
+	&__item {
+		&:not(:last-child) {
+			margin-bottom: 24px;
+		}
+	}
+
+	&__offer {
+		flex: 0 1 390px;
+	}
+}
+.vacancies-card {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 40px 33px;
+	background-color: var(--light-color);
+	border: 1px solid #e5e8ed;
+	border-radius: 4px;
+	transition: all 0.3s;
+	&:hover {
+		box-shadow: 0px 80px 80px -20px rgba(154, 156, 165, 0.08), 0px 30px 24px -10px rgba(154, 156, 165, 0.05), 0px 12px 10px -6px rgba(154, 156, 165, 0.04), 0px 4px 4px -4px rgba(30, 33, 44, 0.03);
+	}
+
+	&__info {
+		&:not(:last-child) {
+			margin-right: 30px;
+		}
+	}
+
+	&__meta {
+		display: flex;
+
+		&:not(:last-child) {
+			margin-bottom: 8px;
+		}
+
+		span {
+			font-size: rem(14);
+			line-height: 150%;
+			display: flex;
+			align-items: center;
+
+
+			&::before{
+				content: '';
+				display: inline-block;
+				width: 16px;
+				height: 16px;
+				margin-right: 8px;
+				background-repeat: no-repeat;
+				background-size: 100%;
+				background-position: center;
+			}
+
+			&:not(:last-child) {
+				margin-right: 12px;
+				&::after {
+					content: '';
+					display: inline-block;
+					width: 1px;
+					height: 12px;
+					margin-left: 12px;
+					background-color: var(--main-color);
+				}
+			}
+		}
+	}
+
+	&__location {
+		&::before{
+			background-image: url('../img/icons/pin.svg');
+		}
+	}
+
+	&__time {
+		&::before{
+			background-image: url('../img/icons/clock.svg');
+		}
+	}
+
+	&__title {
+		padding: 0;
+		margin: 0;
+		font-weight: 700;
+		font-size: rem(20);
+		line-height: 150%;
+		color: var(--dark-color);
+	}
+
+	&__btn {
+	}
+}
+.vacancies-offer {
+	&__title {
+		padding: 0;
+		margin: 0;
+		font-weight: 700;
+		font-size: rem(28);
+		line-height: 150%;
+		color: var(--dark-color);
+
+		&:not(:last-child) {
+			margin-bottom: 24px;
+		}
+	}
+
+	&__text {
+		margin: 0;
+		padding: 0;
+		font-size: rem(18);
+		&:not(:last-child) {
+			margin-bottom: 48px;
+		}
+	}
+
+	&__btn-box {
+		display: flex;
+		justify-content: space-between;
+		
+	}
+
+	&__btn {
+		min-width: 180px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		&:not(:last-child) {
+			margin-right: 30px;
+		}
+	}
+}

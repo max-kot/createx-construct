@@ -6,7 +6,7 @@
   --bg-color: #fff;
   --primary-color: #ff5a30;
   --dark-color: #1e212c;
-  --menu-color: hsl(228, 10%, 29%);
+  --menu-color: #434651;
   --light-color: #fff;
   --gray-color: #f4f5f7;
   --gray-700: #787a80;
@@ -3701,6 +3701,12 @@ body.no-scroll .header {
     min-width: 1000px;
   }
 }
+.map__link {
+  transition: all 0.3s;
+}
+.map__link:hover {
+  opacity: 0.7;
+}
 .map__info {
   position: absolute;
   top: 0;
@@ -3774,6 +3780,127 @@ body.no-scroll .header {
 }
 .map__info-close-btn:hover {
   color: var(--primary-color);
+}
+
+.vacancies {
+  padding: 121px 0 180px;
+  background-color: var(--light-color);
+}
+.vacancies__body {
+  display: flex;
+  justify-content: space-between;
+}
+.vacancies__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  flex: 0 1 705px;
+}
+.vacancies__list:not(:last-child) {
+  margin-right: 30px;
+}
+.vacancies__item:not(:last-child) {
+  margin-bottom: 24px;
+}
+.vacancies__offer {
+  flex: 0 1 390px;
+}
+
+.vacancies-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 33px;
+  background-color: var(--light-color);
+  border: 1px solid #e5e8ed;
+  border-radius: 4px;
+  transition: all 0.3s;
+}
+.vacancies-card:hover {
+  box-shadow: 0px 80px 80px -20px rgba(154, 156, 165, 0.08), 0px 30px 24px -10px rgba(154, 156, 165, 0.05), 0px 12px 10px -6px rgba(154, 156, 165, 0.04), 0px 4px 4px -4px rgba(30, 33, 44, 0.03);
+}
+.vacancies-card__info:not(:last-child) {
+  margin-right: 30px;
+}
+.vacancies-card__meta {
+  display: flex;
+}
+.vacancies-card__meta:not(:last-child) {
+  margin-bottom: 8px;
+}
+.vacancies-card__meta span {
+  font-size: 0.875rem;
+  line-height: 150%;
+  display: flex;
+  align-items: center;
+}
+.vacancies-card__meta span::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+}
+.vacancies-card__meta span:not(:last-child) {
+  margin-right: 12px;
+}
+.vacancies-card__meta span:not(:last-child)::after {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 12px;
+  margin-left: 12px;
+  background-color: var(--main-color);
+}
+.vacancies-card__location::before {
+  background-image: url("../img/icons/pin.svg");
+}
+.vacancies-card__time::before {
+  background-image: url("../img/icons/clock.svg");
+}
+.vacancies-card__title {
+  padding: 0;
+  margin: 0;
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 150%;
+  color: var(--dark-color);
+}
+.vacancies-offer__title {
+  padding: 0;
+  margin: 0;
+  font-weight: 700;
+  font-size: 1.75rem;
+  line-height: 150%;
+  color: var(--dark-color);
+}
+.vacancies-offer__title:not(:last-child) {
+  margin-bottom: 24px;
+}
+.vacancies-offer__text {
+  margin: 0;
+  padding: 0;
+  font-size: 1.125rem;
+}
+.vacancies-offer__text:not(:last-child) {
+  margin-bottom: 48px;
+}
+.vacancies-offer__btn-box {
+  display: flex;
+  justify-content: space-between;
+}
+.vacancies-offer__btn {
+  min-width: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.vacancies-offer__btn:not(:last-child) {
+  margin-right: 30px;
 }
 
 .form__label {
@@ -3979,6 +4106,8 @@ body.no-scroll .header {
 .process-step__number:not(:last-child)::after{background:url("../img/services/line.svg") left/cover no-repeat}
 .advantages__item::before{background-image:url("../img/icons/check-marker.svg")}
 .history__blockquote::before{background-image:url("../img/icons/braces.svg")}
+.vacancies-card__location::before{background-image:url("../img/icons/pin.svg")}
+.vacancies-card__time::before{background-image:url("../img/icons/clock.svg")}
 .form__checkbox:checked ~ .form__checkbox-icon{background-image:url("../img/icons/check.svg")}
 .news-post__comments::before{background:url("../img/icons/chat--grey.svg") center/100% no-repeat}
 }
