@@ -10,3 +10,4 @@ import "./modules/_circle-progress.js";
 import "./modules/_accordion.js";
 import "./modules/_filter.js";
 import "./modules/_map.js";
+import "./modules/_modal.js";
