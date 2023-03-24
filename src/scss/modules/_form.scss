@@ -18,6 +18,13 @@
 		border: 1px solid #d7dadd;
 		border-radius: 4px;
 		padding: 11px 16px;
+
+		&:focus {
+			outline: none;
+			border: 1px solid rgba(255, 90, 48, 0.4);
+			box-shadow: 0px 80px 80px -20px rgba(255, 90, 48, 0.08), 0px 30px 24px -10px rgba(255, 90, 48, 0.05),
+				0px 12px 10px -6px rgba(255, 90, 48, 0.04), 0px 4px 4px -4px rgba(30, 33, 44, 0.03);
+		}
 	}
 
 	&__textarea {
@@ -68,5 +75,36 @@
 		font-size: rem(14);
 		line-height: 150%;
 		color: var(--menu-color);
+	}
+	&__file-label {
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+
+		&:hover {
+			.form__file-text {
+				color: var(--primary-color);
+			}
+		}
+	}
+
+	&__file {
+		display: none;
+	}
+
+	&__file-icon {
+		&:not(:last-child) {
+			margin-right: 12px;
+		}
+		svg {
+			fill: var(--primary-color);
+		}
+	}
+
+	&__file-text {
+		font-size: rem(14);
+		line-height: 150%;
+		color: var(--menu-color);
+		transition: color 0.3s;
 	}
 }

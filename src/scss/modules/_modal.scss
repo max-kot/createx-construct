@@ -8,14 +8,14 @@
 		height: 100%;
 		background: rgba(30, 33, 44, 0.75);
 		width: 100%;
-		min-height: 100vh;
+		height: 100vh;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		padding: 15px;
 		opacity: 0;
-		overflow: auto;
 		visibility: hidden;
+		overflow: auto;
 		transition: all 0.3s;
 
 		&.active {
@@ -34,7 +34,9 @@
 		padding: 48px;
 		position: relative;
 		display: none;
-
+		margin: 0 auto;
+		overflow: auto;
+		max-height: 100vh;
 		@media (max-width: 500px) {
 			padding: 48px 20px;
 		}
@@ -45,12 +47,13 @@
 	}
 
 	&__subscribe {
+		width: 100%;
 		flex: 0 1 486px;
 	}
 	
 	&__send-cv {
-		flex: 0 1 486px;
 		width: 100%;
+		flex: 0 1 486px;
 	}
 
 	&__title {
@@ -146,5 +149,68 @@
 		justify-content: center;
 		align-items: center;
 		text-align: center;
+	}
+}
+
+.modals {
+
+	&__modal {
+	}
+
+	&__send-cv {
+	}
+
+	&__btn-close {
+	}
+
+	&__title {
+	}
+}
+.modal {
+}
+.modal-send-cv {
+
+	&__btn-close {
+	}
+
+	&__title {
+	}
+
+	&__form {
+	}
+
+	&__label {
+	}
+
+	&__input {
+	}
+
+	&__label--textarea {
+	}
+
+	&__textarea {
+	}
+
+	&__btn {
+	}
+}
+.form {
+
+	&__label {
+	}
+
+	&__label-text {
+	}
+
+	&__input {
+	}
+
+	&__dropdown {
+	}
+
+	&__textarea {
+	}
+
+	&__btn {
 	}
 }

@@ -11,3 +11,4 @@ import "./modules/_accordion.js";
 import "./modules/_filter.js";
 import "./modules/_map.js";
 import "./modules/_modal.js";
+import "./modules/_dropdown.js";

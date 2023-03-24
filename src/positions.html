@@ -443,6 +443,22 @@
 						</label>
 						<label class="form__label modal-send-cv__label">
 							<span class="form__label-text">
+								Location*
+							</span>
+							<div class="form__dropdown dropdown">
+								<button class="form__input dropdown__btn" type="button">Choose your location</button>
+								<ul class="dropdown__list">
+									<li class="dropdown__list-item" data-value="none">Choose your location</li>
+									<li class="dropdown__list-item" data-value="eu">Europe</li>
+									<li class="dropdown__list-item" data-value="as">Asia</li>
+									<li class="dropdown__list-item" data-value="am">America</li>
+									<li class="dropdown__list-item" data-value="au">Australia</li>
+								</ul>
+								<input class="dropdown__input" type="text" value="none">
+							</div>
+						</label>
+						<label class="form__label modal-send-cv__label">
+							<span class="form__label-text">
 								Phone*
 							</span>
 							<input class="form__input modal-send-cv__input" type="tel" placeholder="Your phone number" required>
@@ -458,6 +474,15 @@
 								Сovering letter
 							</span>
 							<textarea class="form__input form__textarea modal-send-cv__textarea" placeholder="Your covering letter"></textarea>
+						</label>
+						<label class="form__file-label">
+							<input class="form__file" type="file" name="Attach" id="">
+							<span class="form__file-icon">
+								<svg width='24px' height='24px'>
+									<use xlink:href='./img/icons/sprite.svg#attach'></use>
+								</svg>
+							</span>
+							<span class="form__file-text">Attach your CV*</span>
 						</label>
 						<button class="modal-send-cv__btn form__btn btn" type="submit">Send</button>
 					</form>
