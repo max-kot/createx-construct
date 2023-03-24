@@ -21,9 +21,139 @@
 			"text": "Build your career with Createx Construction Bureau.",
 			})
 			@@include('./modules/_vacancies.html')
+			<section class="values">
+				<div class="container">
+					<div class="values__heading heading">
+						<h2 class="heading__title title-section">
+							Employee benefits
+						</h2>
+						<p class="heading__text">
+							There's always room for talent.
+						</p>
+					</div>
+					<ul class="values__list list-reset">
+						<li class="values__item">
+							<div class="values__icon">
+								<img src="./img/icons/brain.svg" alt="Training">
+							</div>
+							<h4 class="values__title">
+								Training
+							</h4>
+							<p class="values__text">
+								Culpa nostrud commodo ea consequat aliquip reprehenderit. Veniam velit nostrud aliquip sunt.
+							</p>
+						</li>
+						<li class="values__item">
+							<div class="values__icon">
+								<img src="./img/icons/grow.svg" alt="Professional Growth">
+							</div>
+							<h4 class="values__title">
+								Professional Growth
+							</h4>
+							<p class="values__text">
+								Anim reprehenderit sint voluptate exercitation adipisicing laborum adipisicing. Minim empor est ea.
+							</p>
+						</li>
+						<li class="values__item">
+							<div class="values__icon">
+								<img src="./img/icons/budget.svg" alt="Growing Salary">
+							</div>
+							<h4 class="values__title">
+								Growing Salary
+							</h4>
+							<p class="values__text">
+								Sit veniam aute dolore adipisicing nulla sit culpa. Minim mollit voluptate ullamco proident ea ad.
+							</p>
+						</li>
+					</ul>
+				</div>
+			</section>
 			@@include('./modules/_contacts-section.html')
 		</main>
 		@@include('./modules/_footer.html')
+		<div class="modals">
+			<div class="modals__overlay">
+				<div class="modals__modal modal modals__subscribe modal-subscribe" id="modal-subscribe">
+					<button class="modal-subscribe__btn-close modals__btn-close" role="button">Close</button>
+					<h2 class="modal-subscribe__title modals__title">
+						Subscribe to our newsletter
+					</h2>
+					<form class="modal-subscribe__form form" action="#">
+						<label class="form__label modal-subscribe__label">
+							<span class="form__label-text">
+								Name*
+							</span>
+							<input class="form__input modal-subscribe__input" type="text" placeholder="Your name" required>
+						</label>
+						<label class="form__label modal-subscribe__label">
+							<span class="form__label-text">
+								Email*
+							</span>
+							<input class="form__input modal-subscribe__input" type="email" placeholder="Your working email" required>
+						</label>
+						<button class="modal-subscribe__btn form__btn btn" type="submit">Send</button>
+					</form>
+				</div>
+				<div class="modals__modal modal modals__send-cv modal-send-cv" id="modal-send-cv">
+					<button class="modal-send-cv__btn-close modals__btn-close" role="button">Close</button>
+					<h2 class="modal-send-cv__title modals__title">
+						Send your CV
+					</h2>
+					<form class="modal-send-cv__form form" action="#">
+						<label class="form__label modal-send-cv__label">
+							<span class="form__label-text">
+								Name*
+							</span>
+							<input class="form__input modal-send-cv__input" type="text" placeholder="Your name" required>
+						</label>
+						<label class="form__label modal-send-cv__label">
+							<span class="form__label-text">
+								Location*
+							</span>
+							<div class="form__dropdown dropdown">
+								<button class="form__input dropdown__btn" type="button">Choose your location</button>
+								<ul class="dropdown__list">
+									<li class="dropdown__list-item" data-value="none">Choose your location</li>
+									<li class="dropdown__list-item" data-value="eu">Europe</li>
+									<li class="dropdown__list-item" data-value="as">Asia</li>
+									<li class="dropdown__list-item" data-value="am">America</li>
+									<li class="dropdown__list-item" data-value="au">Australia</li>
+								</ul>
+								<input class="dropdown__input" type="text" value="none">
+							</div>
+						</label>
+						<label class="form__label modal-send-cv__label">
+							<span class="form__label-text">
+								Phone*
+							</span>
+							<input class="form__input modal-send-cv__input" type="tel" placeholder="Your phone number" required>
+						</label>
+						<label class="form__label modal-send-cv__label">
+							<span class="form__label-text">
+								Email*
+							</span>
+							<input class="form__input modal-send-cv__input" type="email" placeholder="Your working email" required>
+						</label>
+						<label class="form__label modal-send-cv__label modal-send-cv__label--textarea">
+							<span class="form__label-text">
+								Сovering letter
+							</span>
+							<textarea class="form__input form__textarea modal-send-cv__textarea" placeholder="Your covering letter"></textarea>
+						</label>
+						<label class="form__file-label">
+							<input class="form__file" type="file" name="Attach" id="">
+							<span class="form__file-icon">
+								<svg width='24px' height='24px'>
+									<use xlink:href='./img/icons/sprite.svg#attach'></use>
+								</svg>
+							</span>
+							<span class="form__file-text">Attach your CV*</span>
+						</label>
+						<button class="modal-send-cv__btn form__btn btn" type="submit">Send</button>
+					</form>
+				</div>
+			</div>
+		</div>
 	</div>
 	@@include('./base/scripts.html')
 </body>
