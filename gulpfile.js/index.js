@@ -41,6 +41,8 @@ exports.copy = app.gulp.series(
 	copy.js,
 	copy.copyAll,
 );
+exports.copyJS = copy.js;
+exports.copyCSS = copy.css;
 exports.copyAll = copy.copyAll;
 exports.del = del;
 exports.images = images;

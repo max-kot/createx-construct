@@ -41,6 +41,28 @@ body {
 .no-scroll {
 	overflow: hidden;
 }
+
+body {
+	* {
+		scrollbar-width: thin;
+		scrollbar-color:  var(--primary-color) var(--light-color);
+	 }
+
+	*::-webkit-scrollbar {
+		width: 24px; /* ширина всей полосы прокрутки */
+		
+	}
+
+	*::-webkit-scrollbar-track {
+		background: var(--light-color); /* цвет зоны отслеживания */
+	}
+
+	*::-webkit-scrollbar-thumb {
+		background-color: var(--primary-color); /* цвет бегунка */
+		border-radius: 20px; /* округлось бегунка */
+		border: 3px solid var(--light-color); /* отступ вокруг бегунка */
+	}
+}
 /*--- Grid ---*/
 .wrapper {
 	min-height: 100%;
@@ -58,7 +80,6 @@ body {
 	padding: 0 15px;
 	margin: 0 auto;
 }
-
 
 /*--- Elements ---*/
 .accent-text {
