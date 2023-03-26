@@ -12,7 +12,7 @@ const copy = {
 
 	css() {
 		return app.gulp.src(path.copy.css.src)
-			.pipe(app.webpCss()) // автоматом переводит img в webp
+			//.pipe(app.webpCss()) // автоматом переводит img в webp // !
 			.pipe(app.gulp.dest(path.copy.css.dest))
 	},
 
