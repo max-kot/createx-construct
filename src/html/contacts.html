@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	@@include('./base/head.html', {
+	"title": 'Createx Constract | Contacts'
+	})
+</head>
+
+<body>
+	<div class="wrapper">
+		@@include('./modules/_header.html')
+		<main class="main">
+			@@include('./modules/_cover.html', {
+			"bglink": "./img/cover/contacts.jpg",
+			"title": "Contacts",
+			"link" : {
+			name: "Contacts",
+			href: "#",
+			},
+			"text": "Contact us for all your construction needs. We always welcome any questions and comments.",
+			})
+			@@include('./modules/_contacts-form.html')
+		</main>
+		@@include('./modules/_footer.html')
+	</div>
+	@@include('./base/scripts.html')
+</body>
+
+</html>
