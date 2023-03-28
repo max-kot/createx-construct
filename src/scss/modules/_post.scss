@@ -1,0 +1,36 @@
+.post {
+	padding-bottom: 180px;
+	@media (max-width: 1024px) {
+		padding-bottom: 90px;
+	}
+	@media (max-width: 768px) {
+		padding-bottom: 60px;
+	}
+	&__cover {
+	}
+
+	&__article {
+		margin-top: -80px;
+		
+		@media (max-width: 1024px) {
+			margin-top: -40px;
+		}
+		
+		@media (max-width: 768px) {
+			margin-top: -20px;
+		}
+		
+		&:not(:last-child) {
+			margin-bottom: 80px;
+			@media (max-width: 768px) {
+				margin-bottom: 40px;
+			}
+		}
+	}
+
+	&__comments {
+		&:not(:last-child) {
+			margin-bottom: 120px;
+		}
+	}
+}

@@ -1,0 +1,178 @@
+.comments {
+
+	&__body {
+	}
+
+	&__title {
+		text-align: center;
+		&:not(:last-child) {
+			margin-bottom: 60px;
+			@media (max-width: 768px) {
+				margin-bottom: 30px;
+			}
+		}
+	}
+
+	&__list {
+		padding: 0;
+		margin: 0;
+		list-style-type: none;
+		&:not(:last-child) {
+			margin-bottom: 120px;
+			@media (max-width: 1024px) {
+				margin-bottom: 60px;
+			}
+			@media (max-width: 768px) {
+				margin-bottom: 40px;
+			}
+		}
+	}
+
+	&__item {
+		&:not(:last-child) {
+			margin-bottom: 60px;
+			@media (max-width: 768px) {
+				margin-bottom: 20px;
+			}
+		}
+	}
+
+	&__form-box {
+	}
+
+	&__form {
+	}
+}
+.comment {
+	display: flex;
+	flex-wrap: wrap;
+	margin: -15px;
+	@media (max-width: 768px) {
+		margin: -5px;
+	}
+
+	& > * {
+		padding: 15px;
+		@media (max-width: 768px) {
+			padding: 5px;
+		}
+	}
+
+	&__info {
+		flex: 1 1 200px;
+	}
+
+	&__name {
+		padding: 0;
+		margin: 0;
+		font-weight: 700;
+		font-size: rem(18);
+		line-height: 150%;
+		color: var(--dark-color);
+
+		&:not(:last-child) {
+			margin-bottom: 8px;
+			@media (max-width: 768px) {
+				margin-bottom: 2px;
+			}
+		}
+	}
+
+	&__date {
+		font-size: rem(14);
+		line-height: 150%;
+	}
+
+	&__content {
+		flex: 1 1 640px;
+
+	}
+
+	&__text {
+		padding: 0;
+		margin: 0;
+		color: var(--gray-800);
+		&:not(:last-child) {
+			margin-bottom: 16px;
+		}
+	}
+
+	&__reply-link {
+		text-decoration: none;
+		display: inline-block;
+		font-size: rem(14);
+		position: relative;
+		padding-left: 24px;
+		color: var(--main-color);
+		transition: all 0.3s;
+
+		&:hover {
+			color: var(--primary-color);
+		}
+
+		&::before {
+			content: "";
+			position: absolute;
+			top: 3px;
+			left: 0;
+			width: 16px;
+			height: 16px;
+			margin-right: 8px;
+			background-image: url("../img/icons/share.svg");
+			background-size: 100%;
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+	}
+
+	&__reply-name {
+		color: var(--primary-color);
+		font-weight: 700;
+	}
+}
+
+.comments-form {
+	display: flex;
+	flex-wrap: wrap;
+	margin: -11px -15px;
+
+	& > * {
+		padding: 11px 15px;
+	}
+	&__title {
+		text-align:center;
+		&:not(:last-child) {
+			margin-bottom: 48px;
+			@media (max-width: 768px) {
+				margin-bottom: 20px;
+			}
+		}
+	}
+
+	&__label {
+		flex: 1 1 50%;
+	}
+
+	&__input {
+
+	}
+
+	&__label--textarea {
+		flex: 1 1 100%;
+		
+		
+	}
+
+	&__textarea {
+		height: 100px;
+	}
+
+	&__btn {
+		padding: 15px 40px;
+		margin: 48px auto 0;
+		@media (max-width: 500px) {
+			margin: 20px 11px 0;
+		}
+	}
+}
+
